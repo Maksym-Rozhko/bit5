@@ -1,7 +1,44 @@
+@include small-desktop {
+    .main-info {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        .today {
+            &__container {
+                padding-right: 20px;
+            }
+
+            &__info {
+                max-width: inherit;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &__price {
+                grid-column: 1;
+            }
+
+            .stats-range,
+            .stats-date {
+                grid-column: 2;
+            }
+        }
+    }
+}
+
 @include middle-tablet {
     .main-screen {
         &__title {
             font-size: 44px;
+        }
+    }
+    .main-info {
+        .today {
+            &__info {
+                max-width: 277px;
+                display: block;
+            }
         }
     }
 }
@@ -15,6 +52,56 @@
         &__title {
             font-size: 34px;
             margin-bottom: 20px;
+        }
+    }
+    .main-info {
+        &__title {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .today {
+            &__container {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                padding-right: 10px;
+                gap: 10px;
+            }
+
+            &__price {
+                margin-bottom: 20px;
+                padding-left: 20px;
+                font-size: 30px;
+            }
+
+            &__stats-info {
+                padding-left: 20px;
+            }
+
+            &__stats-info--border {
+                padding-bottom: 12px;
+                margin-bottom: 10px;
+            }
+
+            &__stats-title {
+                font-size: 16px;
+                line-height: 22px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .recent {
+        &__container {
+            margin: 20px;
+        }
+
+        .purchases {
+            &__list {
+                &-item {
+                    padding: 10px;
+                }
+            }
         }
     }
 }
@@ -48,6 +135,70 @@
         &__description {
             position: absolute;
             bottom: 25px;
+        }
+    }
+    .main-info {
+        .today {
+            &__container {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &__grafic {
+                align-self: center;
+            }
+        }
+    }
+    .recent {
+        .purchases {
+            &__titles {        
+                .purchases__title {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+
+            &__list {
+                &-item {
+                    padding: 8px;
+                    font-size: 10px;
+
+                    .code {
+                        font-size: 6px;
+
+                        .number {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .recent {
+        &__container {
+            margin: 10px;
+        }
+        .purchases {
+            &__titles {        
+                .purchases__title {
+                    font-size: 12px;
+                }
+            }
+
+            &__list {
+                &-item {
+                    padding: 8px 2px;
+                    font-size: 8px;
+
+                    .code {
+                        margin-right: 5px;
+                    }
+                }
+            }
         }
     }
 }

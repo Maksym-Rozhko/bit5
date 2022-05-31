@@ -1,59 +1,220 @@
-<main class="main">
-    <section class="section main-screen">
-        <div class="wrapper">
-            <div class="main-screen__container">
-                <h1 class="title main-screen__title">
-                    Before the start of the project:
-                </h1>
-                <div class="timer">
-                    <div class="timer__container">
-                        <div class="timer__item">
-                            <div class="timer__numbers">
-                                <div class="dots d_dot"></div>
-                                <svg>
-                                    <circle cx="70" cy="70" r="70"></circle>
-                                    <circle cx="70" cy="70" r="70" id="dd"></circle>
-                                </svg>
-                                <span id="days">08</span>
-                            </div>
-                            <div class="timer__description">Days</div>
+<section class="section main-screen">
+    <div class="wrapper">
+        <div class="main-screen__container">
+            <h1 class="title main-screen__title">
+                Before the start of the project:
+            </h1>
+            <div class="timer">
+                <div class="timer__container">
+                    <div class="timer__item">
+                        <div class="timer__numbers">
+                            <div class="dots d_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="dd"></circle>
+                            </svg>
+                            <span id="days">08</span>
                         </div>
-                        <div class="timer__item">
-                            <div class="timer__numbers">
-                                <div class="dots h_dot"></div>
-                                <svg>
-                                    <circle cx="70" cy="70" r="70"></circle>
-                                    <circle cx="70" cy="70" r="70" id="hh"></circle>
-                                </svg>
-                                <span id="hours">18</span>
-                            </div>
-                            <div class="timer__description">Hours</div>
+                        <div class="timer__description">Days</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__numbers">
+                            <div class="dots h_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="hh"></circle>
+                            </svg>
+                            <span id="hours">18</span>
                         </div>
-                        <div class="timer__item">
-                            <div class="timer__numbers">
-                                <div class="dots m_dot"></div>
-                                <svg>
-                                    <circle cx="70" cy="70" r="70"></circle>
-                                    <circle cx="70" cy="70" r="70" id="mm"></circle>
-                                </svg>
-                                <span id="minutes">33</span>
-                            </div>
-                            <div class="timer__description">Minutes</div>
+                        <div class="timer__description">Hours</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__numbers">
+                            <div class="dots m_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="mm"></circle>
+                            </svg>
+                            <span id="minutes">33</span>
                         </div>
-                        <div class="timer__item">
-                            <div class="timer__numbers">
-                                <div class="dots s_dot"></div>
-                                <svg>
-                                    <circle cx="70" cy="70" r="70"></circle>
-                                    <circle cx="70" cy="70" r="70" id="ss"></circle>
-                                </svg>
-                                <span id="seconds">44</span>
-                            </div>
-                            <div class="timer__description">Seconds</div>
-                        </div>      
+                        <div class="timer__description">Minutes</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="timer__numbers">
+                            <div class="dots s_dot"></div>
+                            <svg>
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70" id="ss"></circle>
+                            </svg>
+                            <span id="seconds">44</span>
+                        </div>
+                        <div class="timer__description">Seconds</div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section main-info">
+    <div class="wrapper">
+        <div class="main-info__container">
+            <div class="main-info__block today">
+                <h2 class="main-info__title">
+                    Bit 5 price Today: 
+                </h2>
+                <div class="today__container">
+                    <div class="today__info">
+                        <div class="today__price">
+                            <span class="today__price-currency">
+                                $
+                            </span>
+                            <span class="today__price-value">
+                                376,77
+                            </span>
+                        </div>
+                        <div class="today__stats-info today__stats-info--border">
+                            <span class="today__stats-title">
+                                Today:
+                            </span>
+                            <span class="today__stats increase"> <!-- change 'increase' class name on 'decrease', to change styles -->
+                                <span class="stats-icon">
+                                    <svg class="icon" width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.70711 0.292893C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65686L8.70711 0.292893ZM9 17L9 1L7 1L7 17L9 17Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="stats-rate">
+                                    + 4,61
+                                </span>
+                            </span>
+                        </div>
+                        <div class="today__stats-info today__stats-info--border">
+                            <span class="today__stats-title">
+                                Today:
+                            </span>
+                            <span class="today__stats decrease"> <!-- change 'increase' class name on 'decrease', to change styles -->
+                                <span class="stats-icon">
+                                    <svg class="icon" width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.70711 0.292893C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65686L8.70711 0.292893ZM9 17L9 1L7 1L7 17L9 17Z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="stats-rate">
+                                    + 4,61
+                                </span>
+                            </span>
+                        </div>
+                        <div class="today__stats-info stats-range  today__stats-info--border">
+                            <span class="stats-range__value">
+                                Min: ($ 372,16)
+                            </span>
+                            <span class="stats-range__value">
+                                Max: ($ 377,24)
+                            </span>
+                        </div>
+                        <div class="today__stats-info stats-date">
+                            <span class="stats-date__value">
+                                25 May, 10:44 Bit
+                            </span>
+                        </div>
+                    </div>
+                    <div class="today__grafic">
+                        <img src="../images/icon/today-graphic.svg" alt="bit5 grafic price today">
+                    </div>
+                </div>
+            </div>
+            <div class="main-info__block recent">
+                <h2 class="main-info__title">
+                    Recent purchases 
+                </h2>
+                <div class="recent__container">
+                    <div class="purchases">
+                        <div class="purchases__titles">
+                            <span class="purchases__title">
+                                Costs
+                            </span>
+                            <span class="purchases__title">
+                                Time
+                            </span>
+                            <span class="purchases__title">
+                                Data
+                            </span>
+                        </div>
+                        <ul class="purchases__list list-reset">
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">1</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">2</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">3</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">4</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">5</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">6</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">7</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">8</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">9</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">10</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">11</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                            <li class="purchases__list-item">
+                                <span class="code"><span class="number">12</span>TV6MuMXfmLbBqPZvBHdwFsDnQeVfn</span>
+                                <span class="costs">50$</span>
+                                <span class="time">11:34:23</span>
+                                <span class="data">20.05.2022</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>

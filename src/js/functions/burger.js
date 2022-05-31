@@ -6,10 +6,14 @@ import { enableScroll } from '../functions/enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const navigationBackground = document.querySelector('.navigation-bg');
+
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    navigationBackground?.classList.toggle('navigation-bg__active');
+    
 
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -27,6 +31,7 @@ import { enableScroll } from '../functions/enable-scroll';
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
+    navigationBackground.classList.remove('navigation-bg__active');
     enableScroll();
   });
 
@@ -36,6 +41,7 @@ import { enableScroll } from '../functions/enable-scroll';
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
+      navigationBackground.classList.remove('navigation-bg__active');
       enableScroll();
     });
   });

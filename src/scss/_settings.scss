@@ -13,6 +13,8 @@ body {
   font-size: 16px;
   line-height: 19px;
   background-color: var(--cs-body-bg);
+  color: var(--cs-light);
+  cursor: none;
 }
 
 img {
@@ -99,6 +101,55 @@ a {
 
 .d-none {
   display: none;
+}
+
+.cursor {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--cs-main);
+  border-radius: 50%;
+  position: absolute;
+  animation: cursorAnim .5s infinite alternate;
+  z-index: 11;
+}
+
+.cursor::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  border: 8px solid var(--cs-light);
+  border-radius: 50%;
+  opacity: .5;
+  top: calc(50% - 18px);
+  left: calc(50% - 18px);
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
+.cursor::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--cs-main);
+  left: calc((50% - 2px));
+  top: calc((50% - 2px));
+}
+
+@include small-tablet {
+  body {
+    cursor: default;
+  }
+
+  .cursor {
+    display: none;
+    
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 }
 
 ::-webkit-scrollbar {width: 12px;height: 12px;}

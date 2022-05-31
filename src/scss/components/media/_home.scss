@@ -1,0 +1,7 @@
+@mixin middle-tablet {
+    .main-screen {
+        &__title {
+            font-size: 44px;
+        }
+    }
+}

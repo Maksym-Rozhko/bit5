@@ -310,3 +310,135 @@
         }
     }
 }
+
+.section {
+    &__title {
+        @include title;
+        margin-bottom: 56px;
+    }
+}
+
+.about {
+    position: relative;
+    z-index: 11;
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 170px;
+    }
+
+    &__image {
+        max-width: 640px;
+
+        .img {
+            border-radius: 4px;
+        }
+    }
+
+    &__content {
+        max-width: 620px;
+
+        &-image {
+            max-width: 190px;
+
+            .img {
+                border-radius: 4px;
+            }
+        }
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            .subtitle {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 27px;
+                color: var(--cs-light);
+                max-width: 380px;
+            }
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 180%;
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 565px;
+            color: var(--cs-light);
+        }
+
+        .text.text--mtb {
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+
+        .text.text-hidden {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+        }
+
+        .text-accent {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--cs-main);
+            display: block;
+        }
+
+        .btn-group {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 75px;
+
+            .btn-readmore {
+                @include btn-transparent;
+            }
+            .link-goto {
+                @include btn-link;
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    display: block;
+                    width: 8px;
+                    height: 2px;
+                    background-color: var(--cs-white);
+                    transition: all ease-in-out .4s;
+                }
+                &::after {
+                    transform: translate(3px, -50%) rotate(45deg);
+                    right: 14px;
+                    top: calc(50% - 3px);
+                }
+                &::before {
+                    transform: translate(-3px, -50%) rotate(-45deg);
+                    top: calc(50% - -1px);
+                    right: 8px;
+                }
+                &:hover {
+                    border-color: transparent;
+
+                    &::before,
+                    &::after {
+                        background-color: var(--cs-main);
+                    }
+                }
+            }
+        }
+        .btn-group.remove-margin {
+            margin-top: 20px;
+        }
+    }
+}

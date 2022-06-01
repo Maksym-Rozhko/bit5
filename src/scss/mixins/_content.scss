@@ -72,3 +72,13 @@
         background-color: var(--cs-main);
     }
 }
+
+@mixin title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 115%;
+    letter-spacing: -0.04em;
+    color: var(--cs-white);
+    margin-top: 0;
+    margin-bottom: 0;
+}

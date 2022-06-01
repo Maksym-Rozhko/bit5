@@ -1,3 +1,11 @@
+@include big-desktop {
+    .about {
+        &__container {
+            gap: 70px;
+        }
+    }
+}
+
 @include small-desktop {
     .main-info {
         &__container {
@@ -25,6 +33,22 @@
             }
         }
     }
+    .about {
+        &__container {
+            gap: 20px;
+        }
+
+        &__content {
+            &-image {
+                min-width: 190px;
+            }
+        }
+    }
+    .section {
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @include middle-tablet {
@@ -34,12 +58,43 @@
         }
     }
     .main-info {
+        padding-bottom: 60px;
         .today {
             &__info {
                 max-width: 277px;
                 display: block;
             }
         }
+    }
+    .about {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__content {
+            max-width: inherit;
+            
+            &-image {
+                min-width: inherit;
+            }
+
+            &-box {
+                .subtitle {
+                    max-width: inherit;
+                }
+            }
+            .text {
+                max-width: inherit;      
+            } 
+            .btn-group {
+                margin-top: 30px;
+            }
+        }
+    }
+    .section {
+        padding: 60px 0;
     }
 }
 
@@ -101,6 +156,14 @@
                 &-item {
                     padding: 10px;
                 }
+            }
+        }
+    }
+    .about {
+        &__content {
+            
+            &-image {
+                min-width: 190px;
             }
         }
     }
@@ -173,6 +236,39 @@
                     }
                 }
             }
+        }
+    }
+    .about {
+        &__content {
+            
+            &-image {
+                min-width: 190px;
+            }
+
+            &-box {
+                gap: 10px;
+                flex-direction: column-reverse;
+
+                .subtitle {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+            .text {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .main-info {
+        padding-bottom: 30px;
+    }
+    .section {
+        padding: 30px 0;
+
+        &__title {
+            margin-bottom: 15px;
+            font-size: 24px;
         }
     }
 }

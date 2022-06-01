@@ -17,6 +17,16 @@
             gap: 75px;
         }
     }
+    .prizes {
+        &__tabs {
+            .tabs {
+                &__nav {
+                    gap: 20px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
 }
 
 @include small-desktop {
@@ -66,6 +76,29 @@
             gap: 30px;
         }
     }
+    .prizes {
+        &__tabs {
+            .tabs {
+                margin-bottom: 20px;
+                &__nav {
+                    gap: 10px;
+                    margin-bottom: 20px;
+                }
+                &__nav-item {
+                    padding-right: 15px;
+                }
+                &__nav-btn {
+                    .tabs__nav-icon {
+                        margin-right: 5px;
+                    }
+                    .tabs__new-text {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -112,6 +145,12 @@
     }
     .section {
         padding: 60px 0;
+    }
+    .prizes {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
     }
 }
 
@@ -290,9 +329,52 @@
             font-size: 24px;
         }
     }
+    .slider {
+        &__container {
+            padding-left: max(15px, (calc(100% - 1480px) / 2));
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+    .prizes {
+        &__tabs {
+            .tabs {
+                &__nav {
+                    flex-wrap: wrap;
+                }
+                &__nav-item {
+                    padding: 10px;
+                }
+                &__nav-btn {
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .tabs__nav-icon {
+                        margin-right: 0;
+                    }
+                    .tabs__new-text {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+                &__content {
+                    .tabs__panel {
+                        .title {
+                            font-size: 18px;
+                            line-height: 22px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-@include mobile {
+@include small-mobile {
     .recent {
         &__container {
             margin: 10px;
@@ -313,15 +395,6 @@
                         margin-right: 5px;
                     }
                 }
-            }
-        }
-    }
-    .slider {
-        &__container {
-            padding-left: max(15px, (calc(100% - 1480px) / 2));
-
-            &::after {
-                content: none;
             }
         }
     }

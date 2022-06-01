@@ -577,3 +577,144 @@
         }
     }
 }
+
+.prizes {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    &__tabs {
+        position: relative;
+        z-index: 11;
+
+        .tabs {
+            margin-bottom: 60px;
+
+            &__nav {
+                gap: 60px;
+                margin-bottom: 80px;
+            }
+
+            &__nav-item {
+                border: 1px solid transparent;
+                border-right: 1px solid rgba(68, 71, 81, 0.5);
+                padding-right: 30px;
+                transition: all ease-in-out .4s;
+
+                &:hover {
+                    border: 1px solid rgba(68, 71, 81, 0.5);
+                    
+                    .tabs__nav-btn {
+                        transform: scale(.8);
+                    }
+
+                    .tabs__nav-icon {
+                        & svg {
+                            color: var(--cs-main);
+                        }
+                    }
+
+                    .tabs__new-text {
+                        span:last-child {
+                            color: var(--cs-main);
+                        }
+                    }
+                }
+            }
+            
+            &__nav-btn {
+                cursor: pointer;
+                color: var(--cs-grey-text);
+                @include flex-v-center;
+                padding: 0;
+                background: transparent;
+                border: none;
+                transition: all ease-in-out .4s;
+            }
+
+            &__nav-btn--active {
+                .tabs__nav-icon {
+                    & svg {
+                        color: var(--cs-main);
+                    }
+                }
+                .tabs__new-text {
+                    span:first-child {
+                        color: var(--cs-white);
+                    }
+                    span:last-child {
+                        color: var(--cs-main);
+                    }
+                }
+            }
+
+            &__nav-icon {
+                width: 50px;
+                height: 50px;
+                @include flex-all-center;
+                border-radius: 50%;
+                background: rgba(233, 233, 233, 0.05);
+                margin-right: 15px;
+
+                & svg {
+                    color: var(--cs-grey-text);
+                    transition: all ease-in-out .4s;
+                }
+            }
+
+            &__new-text {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 27px;
+
+                span:first-child,
+                span:last-child {
+                    color: var(--cs-grey-text);
+                    transition: all ease-in-out .4s;
+                }
+            }
+            &__content {
+                overflow: hidden;
+
+                .tabs__panel {
+                    display: inherit !important;
+                    height: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateX(100%);
+                    transition: all ease-in-out .4s;
+
+                    .title {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 27px;
+                        margin-top: 0;
+                        margin-bottom: 28px;
+                        color: var(--cs-light);
+                    }
+                    .text {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: var(--cs-grey-text);
+                    }
+                }
+                .tabs__panel--active {
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &__signup {
+        @include btn-transparent;
+        padding: 10px 5px;
+        max-width: 104px;
+    }
+}

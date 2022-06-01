@@ -4,6 +4,11 @@
             gap: 70px;
         }
     }
+    .tables {
+        &__container {
+            gap: 75px;
+        }
+    }
 }
 
 @include small-desktop {
@@ -34,6 +39,9 @@
         }
     }
     .about {
+        .section__title {
+            margin-bottom: 30px;
+        }
         &__container {
             gap: 20px;
         }
@@ -44,9 +52,10 @@
             }
         }
     }
-    .section {
-        &__title {
-            margin-bottom: 30px;
+    .tables {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
     }
 }
@@ -239,6 +248,9 @@
         }
     }
     .about {
+        .section__title {
+            margin-bottom: 15px;
+        }
         &__content {
             
             &-image {
@@ -267,7 +279,6 @@
         padding: 30px 0;
 
         &__title {
-            margin-bottom: 15px;
             font-size: 24px;
         }
     }

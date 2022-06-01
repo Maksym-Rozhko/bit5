@@ -314,11 +314,13 @@
 .section {
     &__title {
         @include title;
-        margin-bottom: 56px;
     }
 }
 
 .about {
+    .section__title {
+        margin-bottom: 56px;
+    }
     position: relative;
     z-index: 11;
     
@@ -439,6 +441,22 @@
         }
         .btn-group.remove-margin {
             margin-top: 20px;
+        }
+    }
+}
+
+.tables {
+    .section__title {
+        margin-bottom: 30px;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 150px;
+    }
+    .recent {
+        &__container {
+            margin: 0;
         }
     }
 }

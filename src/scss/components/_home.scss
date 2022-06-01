@@ -748,9 +748,7 @@
             height: 30px;
             border: 1px solid rgba(68, 71, 81, .5);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-all-center;
         }
 
         &__item-description {

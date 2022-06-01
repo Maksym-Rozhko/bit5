@@ -1,62 +1,35 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
-new Swiper('.swiper.main-slider', {
-    slidesPerView: 1,
+new Swiper('.swiper.rating__slider', {
+    slidesPerView: 4.5,
+    spaceBetween: 20,
     loop: true,
 
     navigation: {
-        nextEl: '.main-slider .swiper-button-next',
-        prevEl: '.main-slider .swiper-button-prev',
-    },
-});
-
-new Swiper('.swiper.projects-slider', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-
-    pagination: {
-        el: '.swiper-pagination',
+        nextEl: '.slider__controls .rating__btns.swiper-button-next',
+        prevEl: '.slider__controls .rating__btns.swiper-button-prev',
     },
 
     breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        575: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1440: {
-          slidesPerView: 4,
-        }
-    },
-});
-
-new Swiper('.swiper.news-slider', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
-    breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        575: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1440: {
-          slidesPerView: 4,
-        }
-    },
+      320: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+      },
+      575: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 3.5,
+        spaceBetween: 10,
+      },
+      1440: {
+        slidesPerView: 4.5,
+        spaceBetween: 20,
+      }
+  },
 });

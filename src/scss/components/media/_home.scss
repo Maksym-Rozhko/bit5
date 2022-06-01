@@ -27,6 +27,11 @@
             }
         }
     }
+    .rules {
+        .list {
+            gap: 40px 85px;
+        }
+    }
 }
 
 @include small-desktop {
@@ -96,6 +101,23 @@
                         line-height: 22px;
                     }
                 }
+            }
+        }
+    }
+    .rules {
+        .section__title {
+            margin-bottom: 30px;
+        }
+    
+        .list {
+            gap: 20px 40px;
+
+            &__item {
+                gap: 15px;
+            }
+
+            &__item-number {
+                min-width: 30px;
             }
         }
     }
@@ -220,6 +242,28 @@
             
             &-image {
                 min-width: 190px;
+            }
+        }
+    }
+    .rules {
+        .section__title {
+            margin-bottom: 15px;
+        }
+    
+        .list {
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            &__item {
+                gap: 10px;
+            }
+
+            &__item-number {
+                min-width: 30px;
+            }
+
+            &__item-description {
+                max-width: inherit;
             }
         }
     }

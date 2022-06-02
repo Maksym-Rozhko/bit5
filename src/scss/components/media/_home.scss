@@ -313,6 +313,11 @@
             }
         }
     }
+    .tables {
+        &::after {
+            content: none;
+        }
+    }
     .recent {
         .purchases {
             &__titles {        

@@ -39,7 +39,7 @@
             color: var(--cs-grey-text);
             transition: all ease-in-out .4s;
             padding-bottom: 36px;
-            border-bottom: 3px solid transparent;
+            // border-bottom: 3px solid transparent;
         }
 
         li:hover a {
@@ -49,7 +49,7 @@
         li.active a  {
             color: var(--cs-light);
             cursor: default;
-            border-bottom: 3px solid var(--cs-main);
+            // border-bottom: 3px solid var(--cs-main);
         }
 
         li:not(:last-child) {

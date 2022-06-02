@@ -6,7 +6,7 @@ import { mobileCheck } from "./functions/mobile-check";
 // console.log(mobileCheck())
 
 // Определение ширины экрана
-// import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
+import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
 // if (isDesktop()) {
 //   console.log('...')
 // }
@@ -58,7 +58,24 @@ const tabs = new GraphTabs('tab');
 
 // Подключение анимаций по скроллу
 import AOS from 'aos';
-AOS.init();
+
+AOS.init({
+    disable: 'mobile',
+});
+
+import scrollr from './vendor/_scrollr';
+
+if (isDesktop()) {
+    var s = scrollr.init({
+        edgeStrategy: 'set',
+        easing: {
+            WTF: Math.random,
+            inverted: function(p) {
+                return 1-p;
+            }
+        }
+    });
+}
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';

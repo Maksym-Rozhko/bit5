@@ -462,6 +462,8 @@
     }
     .recent {
         &__container {
+            position: relative;
+            z-index: 11;
             margin: 0;
         }
     }
@@ -723,6 +725,11 @@
 
 .rules {
     background-color: #0C0D10;
+
+    &__container {
+        position: relative;
+        z-index: 11;
+    }
     
     .section__title {
         margin-bottom: 60px;

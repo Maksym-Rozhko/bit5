@@ -265,6 +265,7 @@
     .purchases {
         position: relative;
         z-index: 11;
+        background-color: rgba(9, 10, 13, .8);
         
         &__titles {
             display: grid;
@@ -319,7 +320,8 @@
 
 .about {
     position: relative;
-    background-image: url('../../images/home/background.jpg');
+    // background-image: url('../../images/home/background.jpg');
+    background-color: #0C0D10;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -343,8 +345,6 @@
     }
 
     &__content {
-        position: relative;
-        z-index: 11;
         max-width: 620px;
 
         &-image {
@@ -361,6 +361,8 @@
             gap: 30px;
 
             .subtitle {
+                position: relative;
+                z-index: 11;
                 margin-top: 0;
                 margin-bottom: 0;
                 font-weight: 500;
@@ -372,6 +374,8 @@
         }
 
         .text {
+            position: relative;
+            z-index: 11;
             font-weight: 400;
             font-size: 14px;
             line-height: 180%;
@@ -394,6 +398,8 @@
         }
 
         .text-accent {
+            position: relative;
+            z-index: 11;
             font-weight: 400;
             font-size: 14px;
             line-height: 180%;
@@ -402,6 +408,8 @@
         }
 
         .btn-group {
+                position: relative;
+                z-index: 11;
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -511,7 +519,7 @@
     }
 
     .item {
-        background: rgba(233, 233, 233, 0.03);
+        background: #101114;
         border-radius: 4px;
         max-width: 355px;
         padding: 30px 20px;

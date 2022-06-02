@@ -1,8 +1,12 @@
 .footer {
     padding-top: 85px;
     padding-bottom: 25px;
-    position: relative;
-    z-index: 11;
+    background-color: #090A0D;
+
+    &__container {
+        position: relative;
+        z-index: 11;
+    }
 
     &__top,
     &__bottom {

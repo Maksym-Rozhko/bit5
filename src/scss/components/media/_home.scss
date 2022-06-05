@@ -281,7 +281,7 @@
     .timer {
         &__container {
             gap: 5px;
-            flex-direction: column;
+            // flex-direction: column;
         }
 
         &__item {
@@ -293,11 +293,23 @@
 
         &__numbers {
             margin-bottom: 0;
+            width: 105px;
+            height: 105px;
+            font-size: 35px;
+            line-height: 46px;
+    
+            svg {
+                circle {
+                    r: 50;
+                }
+            }
         }
 
         &__description {
             position: absolute;
-            bottom: 25px;
+            bottom: 15px;
+            font-size: 10px;
+            line-height: 14px;
         }
     }
     .main-info {
@@ -424,6 +436,27 @@
 }
 
 @include small-mobile {
+    .timer {
+        &__numbers {
+            width: 70px;
+            height: 70px;
+            font-size: 25px;
+            line-height: 36px;
+            border: 4px solid var(--cs-grey);
+    
+            svg {
+                circle {
+                    r: 33;
+                }
+            }
+        }
+
+        &__description {
+            bottom: -25px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
     .recent {
         &__container {
             margin: 10px;

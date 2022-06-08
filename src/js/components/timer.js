@@ -60,7 +60,11 @@ function timer(id, deadline) {
             };
         };
 
-        setClock(id, deadline);
+        try {
+            setClock(id, deadline);
+        } catch (error) {
+            
+        }
     }
 };
 let deadline = '2022-06-08';

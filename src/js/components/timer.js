@@ -53,6 +53,8 @@ function timer(id, deadline) {
                     minutes.textContent = '00';
                     seconds.textContent = '00';
 
+                    days.parentElement.parentElement.parentElement.classList.add('timer__container--endtime');
+
                     clearInterval(timeInterval);
                 };
             };

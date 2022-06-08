@@ -24,6 +24,19 @@
         gap: 15px;
     }
 
+    &__container--endtime {
+
+        .timer__numbers {
+            color: red;
+            opacity: .5;
+        }
+
+        .timer__numbers svg:nth-child(2) circle {
+            stroke: red !important;
+            stroke-dashoffset: 0 !important;
+        }
+    }
+
     &__item {
         @include flex-all-center;
         flex-direction: column;

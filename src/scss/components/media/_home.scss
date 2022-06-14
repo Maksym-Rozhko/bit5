@@ -433,6 +433,12 @@
             }
         }
     }
+    .every-day {
+        .section__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
 }
 
 @include small-mobile {

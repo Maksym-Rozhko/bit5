@@ -56,6 +56,9 @@ function timer(id, deadline) {
                     days.parentElement.parentElement.parentElement.classList.add('timer__container--endtime');
 
                     clearInterval(timeInterval);
+
+                    document.querySelector('#currentTimer .timer__container').parentElement.classList.add('d-none');
+                    document.querySelector('#promoTimer .timer__container').parentElement.classList.remove('d-none');
                 };
             };
         };
@@ -67,5 +70,7 @@ function timer(id, deadline) {
         }
     }
 };
-let deadline = '2022-06-08';
-timer('.timer__container', deadline);
+let currentDeadline = '2022-06-22';
+let promoDeadline = '2022-06-23';
+timer('#currentTimer .timer__container', currentDeadline);
+timer('#promoTimer .timer__container', promoDeadline);

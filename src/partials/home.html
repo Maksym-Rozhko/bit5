@@ -140,21 +140,21 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="today__stats-info today__stats-info--border">
+                        <!-- <div class="today__stats-info today__stats-info--border">
                             <span class="today__stats-title">
                                 Today:
                             </span>
-                            <span class="today__stats decrease"> <!-- change 'increase' class name on 'decrease', to change styles -->
+                            <span class="today__stats decrease"> change 'increase' class name on 'decrease', to change styles
                                 <span class="stats-icon">
                                     <svg class="icon" width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M8.70711 0.292893C8.31658 -0.0976314 7.68342 -0.0976315 7.29289 0.292892L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65686L8.70711 0.292893ZM9 17L9 1L7 1L7 17L9 17Z" fill="currentColor"/>
                                     </svg>
                                 </span>
                                 <span class="stats-rate">
-                                    + 4,61
+                                    - 4,61
                                 </span>
                             </span>
-                        </div>
+                        </div> -->
                         <div class="today__stats-info stats-range  today__stats-info--border">
                             <span class="stats-range__value">
                                 Min: ($ 372,16)
@@ -170,7 +170,16 @@
                         </div>
                     </div>
                     <div class="today__grafic">
-                        <img src="../images/icon/today-graphic.svg" alt="bit5 grafic price today">
+                        <img class="d-none" src="../images/icon/today-graphic.svg" alt="bit5 grafic price today">
+                        <div id="app">
+                            <div class="container">
+                                <div class="app__chart app-chart">
+                                    <div class="app-chart__canvas">
+                                        <canvas class="chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

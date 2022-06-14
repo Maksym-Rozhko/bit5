@@ -7,3 +7,4 @@ import customSelect from './components/customSelect';
 import timer from './components/timer';
 import readmore from './components/readmore';
 import accordion from './components/accordion';
+import chart from './components/chart';

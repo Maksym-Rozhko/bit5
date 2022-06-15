@@ -3,10 +3,15 @@ new Chart(
     {
     type: 'line',
     data: {
-        labels: ['Jan', 'Feb', 'March', 'April'],
+        labels: [
+            chart.dataset.chartXAxisA,    
+            chart.dataset.chartXAxisB,    
+            chart.dataset.chartXAxisC,    
+            chart.dataset.chartXAxisD,    
+        ],
         datasets: [
         {
-            label: 'BIT Increase',
+            label: chart.dataset.chartLabelText,
             data: [
                 chart.dataset.chartDotA,
                 chart.dataset.chartDotB,

@@ -1,5 +1,5 @@
 new Chart(
-    document.querySelector('.chart'),
+    chart = document.querySelector('.chart'),
     {
     type: 'line',
     data: {
@@ -7,7 +7,12 @@ new Chart(
         datasets: [
         {
             label: 'BIT Increase',
-            data: [0, 220, 120, 270],
+            data: [
+                chart.dataset.chartDotA,
+                chart.dataset.chartDotB,
+                chart.dataset.chartDotC,
+                chart.dataset.chartDotD
+            ],
             borderColor: '#ee9b4f',
             borderWidth: 1,
             backgroundColor: '#ee9b4f2e',

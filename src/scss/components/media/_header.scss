@@ -6,6 +6,10 @@
             }
         }
 
+        .auth {
+            flex-direction: column;
+        }
+
         .calc-form {
             .select {
                 margin-left: 10px;
@@ -32,6 +36,10 @@
         &__right-box {
             margin-right: 90px;
         }
+        .auth {
+            flex-direction: row;
+            margin-left: 0;
+        }
     }
 }
 
@@ -42,6 +50,21 @@
         }
         .navigation-mobile .auth {
             display: flex;
+        }
+    }
+}
+
+@include small-mobile {
+    .header {
+        .auth {
+            &__btn-anim {
+                padding: 10px 20px;
+            }
+        }
+        .navigation-mobile {
+            .auth {
+                display: flex;
+            }
         }
     }
 }

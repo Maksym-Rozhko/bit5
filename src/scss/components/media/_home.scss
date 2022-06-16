@@ -278,20 +278,20 @@
         }
     }
 
-    .timer {
-        &__container {
+    #currentTimer.timer {
+        .timer__container {
             gap: 5px;
             // flex-direction: column;
         }
 
-        &__item {
+        .timer__item {
             gap: 10px;
             align-items: flex-start;
             flex-direction: row;
             position: relative;
         }
 
-        &__numbers {
+        .timer__numbers {
             margin-bottom: 0;
             width: 105px;
             height: 105px;
@@ -305,9 +305,28 @@
             }
         }
 
-        &__description {
+        .timer__description {
             position: absolute;
             bottom: 15px;
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+    #promoTimer.timer {
+        .timer__container {
+            gap: 5px;
+        }
+
+        .timer__item {
+            gap: 10px;
+            align-items: flex-start;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .timer__description {
+            position: absolute;
+            bottom: 25px;
             font-size: 10px;
             line-height: 14px;
         }
@@ -404,9 +423,10 @@
             .tabs {
                 &__nav {
                     flex-wrap: wrap;
+                    gap: 5px;
                 }
                 &__nav-item {
-                    padding: 10px;
+                    padding: 5px;
                 }
                 &__nav-btn {
                     flex-direction: column;
@@ -419,6 +439,7 @@
                         display: flex;
                         align-items: center;
                         gap: 5px;
+                        font-size: 15px;
                     }
                 }
                 &__content {
@@ -452,8 +473,8 @@
 }
 
 @include small-mobile {
-    .timer {
-        &__numbers {
+    #currentTimer.timer {
+        .timer__numbers {
             width: 70px;
             height: 70px;
             font-size: 25px;
@@ -467,7 +488,7 @@
             }
         }
 
-        &__description {
+        .timer__description {
             bottom: -25px;
             font-size: 12px;
             line-height: 14px;
@@ -491,6 +512,26 @@
 
                     .code {
                         margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .prizes {
+        &__tabs {
+            .tabs {
+                &__nav-btn {
+                    .tabs__nav-icon {
+                        width: 35px;
+                        height: 35px;
+
+                        svg {
+                            width: 18px;
+                            height: 10px;
+                        }
+                    }
+                    .tabs__new-text {
+                        font-size: 12px;
                     }
                 }
             }

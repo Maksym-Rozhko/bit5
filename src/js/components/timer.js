@@ -36,28 +36,46 @@ function timer(id, deadline) {
             function updateClock() {
                 const time = getTimeRemaining(endTime);
 
-                days.textContent = addZero(time.days);
-                hours.textContent = addZero(time.hours);
+                if (days && hours) {
+                    days.textContent = addZero(time.days);
+                    hours.textContent = addZero(time.hours);
+                }
                 minutes.textContent = addZero(time.minutes);
                 seconds.textContent = addZero(time.seconds);
 
-                // set time circular indicator
-                dd.style.strokeDashoffset = 440 - (440 * time.days) / 30;
-                hh.style.strokeDashoffset = 440 - (440 * time.hours) / 24;
+                if (days && hours) {
+                    // set time circular indicator
+                    dd.style.strokeDashoffset = 440 - (440 * time.days) / 30;
+                    hh.style.strokeDashoffset = 440 - (440 * time.hours) / 24;
+                }
                 mm.style.strokeDashoffset = 440 - (440 * time.minutes) / 60;
                 ss.style.strokeDashoffset = 440 - (440 * time.seconds) / 60;
 
+                if (time.total > 0) {
+                    if (minutes) {
+                        minutes.parentElement.parentElement.parentElement.classList.remove('timer__container--endtime');
+                    }
+                }
+
                 if (time.total <= 0) {
-                    days.textContent = '00';
-                    hours.textContent = '00';
+                    if (days && hours) {
+                        days.textContent = '00';
+                        hours.textContent = '00';
+                    }
                     minutes.textContent = '00';
                     seconds.textContent = '00';
 
-                    days.parentElement.parentElement.parentElement.classList.add('timer__container--endtime');
+                    if (days) {
+                        days.parentElement.parentElement.parentElement.classList.add('timer__container--endtime');
+                        document.querySelector('#currentTimer .timer__container').parentElement.remove();
+                    }
+
+                    if (minutes) {
+                        minutes.parentElement.parentElement.parentElement.classList.add('timer__container--endtime');
+                    }
 
                     clearInterval(timeInterval);
 
-                    document.querySelector('#currentTimer .timer__container').parentElement.classList.add('d-none');
                     document.querySelector('#promoTimer .timer__container').parentElement.classList.remove('d-none');
                 };
             };
@@ -70,7 +88,7 @@ function timer(id, deadline) {
         }
     }
 };
-let currentDeadline = '2022-06-22';
-let promoDeadline = '2022-06-23';
+let currentDeadline = '2022-06-16';
+let promoDeadline = new Date(Date.now() + (60 * 1000 + 999));
 timer('#currentTimer .timer__container', currentDeadline);
 timer('#promoTimer .timer__container', promoDeadline);

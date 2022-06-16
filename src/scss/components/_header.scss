@@ -65,13 +65,17 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        margin-left: 5px;
         
         &__signup {
             @include btn-transparent;
-            @include btn-animate;
         }
         &__login {
             @include btn-link;
+        }
+        &__btn-anim {
+            @include btn-transparent;
+            @include btn-animate;
         }
     }
 

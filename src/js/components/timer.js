@@ -88,7 +88,21 @@ function timer(id, deadline) {
         }
     }
 };
+
+const basePassedSince = 59;
+let lastPassedSince = parseInt(document.querySelector('#promoTimer').dataset.lastPassedSince);
 let currentDeadline = '2022-06-16';
-let promoDeadline = new Date(Date.now() + (60 * 1000 + 999));
+let promoDeadline = '2022-06-16';
+
+console.log(basePassedSince);
+console.log(lastPassedSince);
+console.log(basePassedSince - lastPassedSince);
+
+lastPassedSince ? lastPassedSince = basePassedSince - lastPassedSince : lastPassedSince = basePassedSince;
+
+if (lastPassedSince) {
+    promoDeadline = new Date(Date.now() + (lastPassedSince * 1000 + 999));
+}
+
 timer('#currentTimer .timer__container', currentDeadline);
 timer('#promoTimer .timer__container', promoDeadline);

@@ -94,13 +94,9 @@ let lastPassedSince = parseInt(document.querySelector('#promoTimer').dataset.las
 let currentDeadline = '2022-06-16';
 let promoDeadline = '2022-06-16';
 
-console.log(basePassedSince);
-console.log(lastPassedSince);
-console.log(basePassedSince - lastPassedSince);
-
 lastPassedSince ? lastPassedSince = basePassedSince - lastPassedSince : lastPassedSince = basePassedSince;
 
-if (lastPassedSince) {
+if (lastPassedSince > 0) {
     promoDeadline = new Date(Date.now() + (lastPassedSince * 1000 + 999));
 }
 

@@ -1,22 +1,24 @@
+const checkDataAttributes = data => data ? data : null;
+
 new Chart(
     chart = document.querySelector('.chart'),
     {
     type: 'line',
     data: {
         labels: [
-            chart.dataset.chartXAxisA,    
-            chart.dataset.chartXAxisB,    
-            chart.dataset.chartXAxisC,    
-            chart.dataset.chartXAxisD,    
+            checkDataAttributes(chart.dataset.chartXAxisA),  
+            checkDataAttributes(chart.dataset.chartXAxisB),    
+            checkDataAttributes(chart.dataset.chartXAxisC),
+            checkDataAttributes(chart.dataset.chartXAxisD),    
         ],
         datasets: [
         {
-            label: chart.dataset.chartLabelText,
+            label: checkDataAttributes(chart.dataset.chartLabelText),
             data: [
-                chart.dataset.chartDotA,
-                chart.dataset.chartDotB,
-                chart.dataset.chartDotC,
-                chart.dataset.chartDotD
+                checkDataAttributes(chart.dataset.chartDotA),
+                checkDataAttributes(chart.dataset.chartDotB),
+                checkDataAttributes(chart.dataset.chartDotC),
+                checkDataAttributes(chart.dataset.chartDotD),
             ],
             borderColor: '#ee9b4f',
             borderWidth: 1,

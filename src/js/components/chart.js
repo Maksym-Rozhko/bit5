@@ -33,8 +33,12 @@ new Chart(
         responsive: true,
             scales: {
                 y: {
-                    beginAtZero: true,
-                }
+                    ticks: {
+                        callback: function(value) {
+                            return value.toFixed(10).replace(/0*$/,'');
+                        }
+                    }
+                }     
             }
         }
     }
